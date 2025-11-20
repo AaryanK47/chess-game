@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Chess</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>PRO CHESS</h1>
+            <div class="game-status" id="gameStatus">White's Turn</div>
+        </header>
+        
+        <main class="game-area">
+            <div class="captured-pieces" id="capturedBlack"></div>
+            
+            <div class="board-container">
+                <div id="chessboard" class="chessboard"></div>
+                <div id="promotionModal" class="modal hidden">
+                    <div class="modal-content">
+                        <h3>Promote Pawn</h3>
+                        <div class="promotion-options" id="promotionOptions">
+                            <!-- Options injected via JS -->
+                        </div>
+                    </div>
+                </div>
+                <div id="gameOverModal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2 id="winnerText">White Wins!</h2>
+                        <p id="endReason">Checkmate</p>
+                        <button id="restartBtn">Play Again</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="captured-pieces" id="capturedWhite"></div>
+        </main>
+
+        <aside class="controls">
+            <div class="player-info white-player active">
+                <div class="avatar">♔</div>
+                <div class="name">White</div>
+            </div>
+            <div class="player-info black-player">
+                <div class="avatar">♚</div>
+                <div class="name">Black</div>
+            </div>
+            <button id="resetGameBtn" class="secondary-btn">Reset Game</button>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
